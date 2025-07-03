@@ -14,7 +14,13 @@ export default function PlayRoom() {
 
   useEffect(() => {
     if (!room) return;
-    fetch(`/api/resume?room=${room}`)
+    fetch('/api/resume', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ roomId: room }),
+    })
       .then((res) => res.json())
       .then((data) => setSaved(data));
   }, [room]);
