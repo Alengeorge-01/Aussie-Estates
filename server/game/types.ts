@@ -6,7 +6,10 @@ export interface PlayerState {
 export interface Property {
   id: string;
   name: string;
-  price: number;
+  price?: number;
+  type: string;
+  colour?: string;
+  rent?: number[];
 }
 
 export interface GameState {
