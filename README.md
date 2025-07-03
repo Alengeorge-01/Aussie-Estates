@@ -12,8 +12,17 @@ Due to the restricted environment no npm dependencies are installed. The file tr
 pnpm install
 ```
 
-2. Run the development servers:
+2. Start the Next.js client:
+```bash
+pnpm run dev:client
+```
 
+3. Start the boardgame.io server in another terminal:
+```bash
+pnpm run dev:server
+```
+
+4. You can also run both with:
 ```bash
 pnpm run dev
 ```
@@ -37,11 +46,9 @@ This repository contains a minimal boardgame.io configuration for an Australian-
 
 See `server/game/index.ts` for the implementation.
 
-Aussie Estates is a real estate listing platform. The project showcases modern web development practices and serves as a playground for deploying full‑stack applications.
 
 ## Project Goals
 
-- Provide a simple property catalogue that users can browse.
 - Experiment with server‑side rendering and API routes.
 - Deploy to both Vercel (frontend) and Railway (backend/database).
 
@@ -51,7 +58,6 @@ Aussie Estates is a real estate listing platform. The project showcases modern w
 - **TypeScript** for type safety
 - **Tailwind CSS** for styling
 - **Node.js** and **Express** API routes
-- **Prisma** ORM with **PostgreSQL**
 
 ## Setup
 
@@ -61,21 +67,30 @@ Aussie Estates is a real estate listing platform. The project showcases modern w
    cd Aussie-Estates
    npm install
    ```
-2. Create an `.env` file and provide the following variables:
-   ```
-   DATABASE_URL=postgresql://user:password@localhost:5432/aussie_estates
-   NEXT_PUBLIC_API_URL=http://localhost:3000/api
-   ```
-3. (Optional) start a local PostgreSQL instance or configure Railway.
+2. Copy the example `.env` files from `client/` and `server/` and provide values. The server uses `REDIS_URL` to connect to Redis (default `redis://localhost:6379`).
 
+3. Run the seed script to generate initial board data:
+   ```bash
+   pnpm run seed
+   ```
 ## Development
 
-Run the development server with hot reloading:
+Start the Next.js client:
 ```bash
-npm run dev
+pnpm run dev:client
 ```
-Open <http://localhost:3000> in your browser.
 
+Start the boardgame.io server in another terminal:
+```bash
+pnpm run dev:server
+```
+
+You can run both at once with:
+```bash
+pnpm run dev
+```
+
+The client is served at http://localhost:3000 and the server on http://localhost:4000.
 ## Production Build
 
 Create a production build and start the server:
@@ -95,8 +110,6 @@ The application will run in optimized production mode.
 
 ### Railway
 
-- Create a PostgreSQL database in Railway.
-- Add the `DATABASE_URL` provided by Railway to your environment variables.
 - Optionally deploy the backend API if you split it from the Next.js frontend.
 
 ## License
