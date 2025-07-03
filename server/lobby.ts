@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import { v4 as uuid } from 'uuid';
-import { loadGame, saveGame } from './save';
+import { loadGame, saveGame, RedisUnavailableError } from './save';
 
 export interface Player {
   id: string;
@@ -35,14 +35,30 @@ router.get('/lobby/players', (_req, res) => {
 router.post('/room', async (req, res) => {
   const roomId = uuid().slice(0, 6);
   const playerId = uuid();
-  await saveGame(roomId, null);
+  try {
+    await saveGame(roomId, null);
+  } catch (err) {
+    if (err instanceof RedisUnavailableError) {
+      console.error('Unable to create room', err);
+      return res.status(503).json({ error: 'Redis unavailable' });
+    }
+    throw err;
+  }
   res.json({ roomId, playerId });
 });
 
 router.post('/resume', async (req, res) => {
   const { roomId } = req.body as { roomId: string };
-  const state = await loadGame(roomId);
-  res.json(state);
+  try {
+    const state = await loadGame(roomId);
+    return res.json(state);
+  } catch (err) {
+    if (err instanceof RedisUnavailableError) {
+      console.error('Unable to load game', err);
+      return res.status(503).json({ error: 'Redis unavailable' });
+    }
+    throw err;
+  }
 });
 
 export default router;
