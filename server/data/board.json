@@ -1,1 +1,406 @@
-[]
+[
+  {
+    "id": "go",
+    "name": "Go",
+    "type": "special"
+  },
+  {
+    "id": "bondi",
+    "name": "Bondi Beach",
+    "colour": "brown",
+    "price": 60,
+    "rent": [
+      2,
+      10,
+      30,
+      90,
+      160,
+      250
+    ]
+  },
+  {
+    "id": "chest1",
+    "name": "Community Chest",
+    "type": "special"
+  },
+  {
+    "id": "byron",
+    "name": "Byron Bay",
+    "colour": "brown",
+    "price": 60,
+    "rent": [
+      4,
+      20,
+      60,
+      180,
+      320,
+      450
+    ]
+  },
+  {
+    "id": "tax1",
+    "name": "Income Tax",
+    "type": "special"
+  },
+  {
+    "id": "central",
+    "name": "Central Station",
+    "type": "station",
+    "price": 200
+  },
+  {
+    "id": "surfers",
+    "name": "Surfers Paradise",
+    "colour": "lightblue",
+    "price": 100,
+    "rent": [
+      6,
+      30,
+      90,
+      270,
+      400,
+      550
+    ]
+  },
+  {
+    "id": "chance1",
+    "name": "Chance",
+    "type": "special"
+  },
+  {
+    "id": "cairns",
+    "name": "Cairns Esplanade",
+    "colour": "lightblue",
+    "price": 100,
+    "rent": [
+      6,
+      30,
+      90,
+      270,
+      400,
+      550
+    ]
+  },
+  {
+    "id": "whitsunday",
+    "name": "Whitsunday Shores",
+    "colour": "lightblue",
+    "price": 120,
+    "rent": [
+      8,
+      40,
+      100,
+      300,
+      450,
+      600
+    ]
+  },
+  {
+    "id": "jail",
+    "name": "Jail / Just Visiting",
+    "type": "special"
+  },
+  {
+    "id": "darwin",
+    "name": "Darwin Waterfront",
+    "colour": "pink",
+    "price": 140,
+    "rent": [
+      10,
+      50,
+      150,
+      450,
+      625,
+      750
+    ]
+  },
+  {
+    "id": "electric",
+    "name": "Electric Company",
+    "type": "utility",
+    "price": 150
+  },
+  {
+    "id": "alice",
+    "name": "Alice Springs",
+    "colour": "pink",
+    "price": 140,
+    "rent": [
+      10,
+      50,
+      150,
+      450,
+      625,
+      750
+    ]
+  },
+  {
+    "id": "kakadu",
+    "name": "Kakadu National Park",
+    "colour": "pink",
+    "price": 160,
+    "rent": [
+      12,
+      60,
+      180,
+      500,
+      700,
+      900
+    ]
+  },
+  {
+    "id": "southern",
+    "name": "Southern Cross Station",
+    "type": "station",
+    "price": 200
+  },
+  {
+    "id": "barossa",
+    "name": "Barossa Valley",
+    "colour": "orange",
+    "price": 180,
+    "rent": [
+      14,
+      70,
+      200,
+      550,
+      750,
+      950
+    ]
+  },
+  {
+    "id": "chest2",
+    "name": "Community Chest",
+    "type": "special"
+  },
+  {
+    "id": "kangaroo",
+    "name": "Kangaroo Island",
+    "colour": "orange",
+    "price": 180,
+    "rent": [
+      14,
+      70,
+      200,
+      550,
+      750,
+      950
+    ]
+  },
+  {
+    "id": "coober",
+    "name": "Coober Pedy",
+    "colour": "orange",
+    "price": 200,
+    "rent": [
+      16,
+      80,
+      220,
+      600,
+      800,
+      1000
+    ]
+  },
+  {
+    "id": "parking",
+    "name": "Free Parking",
+    "type": "special"
+  },
+  {
+    "id": "ocean",
+    "name": "Great Ocean Road",
+    "colour": "red",
+    "price": 220,
+    "rent": [
+      18,
+      90,
+      250,
+      700,
+      875,
+      1050
+    ]
+  },
+  {
+    "id": "chance2",
+    "name": "Chance",
+    "type": "special"
+  },
+  {
+    "id": "phillip",
+    "name": "Phillip Island",
+    "colour": "red",
+    "price": 220,
+    "rent": [
+      18,
+      90,
+      250,
+      700,
+      875,
+      1050
+    ]
+  },
+  {
+    "id": "bells",
+    "name": "Bells Beach",
+    "colour": "red",
+    "price": 240,
+    "rent": [
+      20,
+      100,
+      300,
+      750,
+      925,
+      1100
+    ]
+  },
+  {
+    "id": "roma",
+    "name": "Roma Street Station",
+    "type": "station",
+    "price": 200
+  },
+  {
+    "id": "cradle",
+    "name": "Cradle Mountain",
+    "colour": "yellow",
+    "price": 260,
+    "rent": [
+      22,
+      110,
+      330,
+      800,
+      975,
+      1150
+    ]
+  },
+  {
+    "id": "wineglass",
+    "name": "Wineglass Bay",
+    "colour": "yellow",
+    "price": 260,
+    "rent": [
+      22,
+      110,
+      330,
+      800,
+      975,
+      1150
+    ]
+  },
+  {
+    "id": "water",
+    "name": "Water Works",
+    "type": "utility",
+    "price": 150
+  },
+  {
+    "id": "arthur",
+    "name": "Port Arthur",
+    "colour": "yellow",
+    "price": 280,
+    "rent": [
+      24,
+      120,
+      360,
+      850,
+      1025,
+      1200
+    ]
+  },
+  {
+    "id": "gotojail",
+    "name": "Go To Jail",
+    "type": "special"
+  },
+  {
+    "id": "goldcoast",
+    "name": "Gold Coast",
+    "colour": "green",
+    "price": 300,
+    "rent": [
+      26,
+      130,
+      390,
+      900,
+      1100,
+      1275
+    ]
+  },
+  {
+    "id": "sunshine",
+    "name": "Sunshine Coast",
+    "colour": "green",
+    "price": 300,
+    "rent": [
+      26,
+      130,
+      390,
+      900,
+      1100,
+      1275
+    ]
+  },
+  {
+    "id": "chest3",
+    "name": "Community Chest",
+    "type": "special"
+  },
+  {
+    "id": "brisbane",
+    "name": "Brisbane Riverwalk",
+    "colour": "green",
+    "price": 320,
+    "rent": [
+      28,
+      150,
+      450,
+      1000,
+      1200,
+      1400
+    ]
+  },
+  {
+    "id": "perth",
+    "name": "Perth Station",
+    "type": "station",
+    "price": 200
+  },
+  {
+    "id": "chance3",
+    "name": "Chance",
+    "type": "special"
+  },
+  {
+    "id": "sydney",
+    "name": "Sydney Opera House",
+    "colour": "darkblue",
+    "price": 350,
+    "rent": [
+      35,
+      175,
+      500,
+      1100,
+      1300,
+      1500
+    ]
+  },
+  {
+    "id": "tax2",
+    "name": "Luxury Tax",
+    "type": "special"
+  },
+  {
+    "id": "melbourne",
+    "name": "Melbourne CBD",
+    "colour": "darkblue",
+    "price": 400,
+    "rent": [
+      50,
+      200,
+      600,
+      1400,
+      1700,
+      2000
+    ]
+  }
+]
