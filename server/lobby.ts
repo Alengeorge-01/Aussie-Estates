@@ -39,8 +39,8 @@ router.post('/room', async (req, res) => {
   res.json({ roomId, playerId });
 });
 
-router.get('/resume', async (req, res) => {
-  const roomId = req.query.room as string;
+router.post('/resume', async (req, res) => {
+  const { roomId } = req.body as { roomId: string };
   const state = await loadGame(roomId);
   res.json(state);
 });
