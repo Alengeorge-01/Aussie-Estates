@@ -6,8 +6,9 @@
     "dev:client": "next dev",
     "dev:server": "ts-node server/index.ts",
     "dev": "concurrently \"pnpm run dev:client\" \"pnpm run dev:server\"",
-    "build": "next build",
-    "start": "NODE_ENV=production node server/index.js",
+    "build:server": "tsc --project tsconfig.json",
+    "build": "next build && pnpm run build:server",
+    "start": "NODE_ENV=production node dist/index.js",
     "seed": "ts-node scripts/seedBoard.ts"
   },
   "dependencies": {
