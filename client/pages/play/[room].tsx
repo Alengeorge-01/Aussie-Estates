@@ -10,7 +10,7 @@ import { AussieGame } from '../../../server/game';
 export default function PlayRoom() {
   const router = useRouter();
   const { room } = router.query;
-  const [saved, setSaved] = useState<any>(null);
+  const [initialState, setInitialState] = useState<any>(null);
 
   useEffect(() => {
     if (!room) return;
@@ -22,7 +22,7 @@ export default function PlayRoom() {
       body: JSON.stringify({ roomId: room }),
     })
       .then((res) => res.json())
-      .then((data) => setSaved(data));
+      .then((data) => setInitialState(data));
   }, [room]);
 
   const GameClient = useMemo(() => {
@@ -33,8 +33,9 @@ export default function PlayRoom() {
       multiplayer: SocketIO({
         server: process.env.NEXT_PUBLIC_SOCKET_URL || 'http://localhost:4001',
       }),
+      initialState,
     });
-  }, [room]);
+  }, [room, initialState]);
 
   if (!GameClient || !room) return <p>Loading...</p>;
 
