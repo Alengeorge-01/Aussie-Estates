@@ -30,7 +30,9 @@ export default function PlayRoom() {
     return Client({
       game: AussieGame,
       board: Board,
-      multiplayer: SocketIO({ server: 'http://localhost:4001' }),
+      multiplayer: SocketIO({
+        server: process.env.NEXT_PUBLIC_SOCKET_URL || 'http://localhost:4001',
+      }),
     });
   }, [room]);
 
