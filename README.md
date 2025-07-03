@@ -1,6 +1,16 @@
 # Aussie Estates
 
 
+This repository contains a basic Next.js project with TypeScript and Tailwind CSS.
+
+## Directories
+
+- `client/` – Next.js application.
+- `server/` – Express server with simple lobby API.
+
+Environment examples can be found in `.env.example`, `client/.env.example`, and `server/.env.example`.
+
+
 This repository contains a minimal boardgame.io configuration for an Australian-themed property trading game. It demonstrates a simple setup with two phases:
 
 - **Buy** – players can roll dice and purchase the property they land on.
@@ -73,3 +83,4 @@ The application will run in optimized production mode.
 ## License
 
 This project is provided for demonstration purposes.
+
