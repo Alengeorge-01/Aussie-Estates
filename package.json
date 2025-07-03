@@ -1,5 +1,14 @@
 {
   "name": "aussie-estates",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev:client": "next dev",
+    "dev:server": "ts-node server/index.ts",
+    "dev": "concurrently \"pnpm run dev:client\" \"pnpm run dev:server\"",
+    "build": "next build",
+    "start": "NODE_ENV=production node server/index.js",
+    "seed": "ts-node scripts/seedBoard.ts"
   "version": "1.0.0",
   "private": true,
   "scripts": {
